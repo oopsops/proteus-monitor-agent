@@ -1,4 +1,3 @@
-
 var domain = require('domain');
 var WebSocket = require('ws');
 var os = require('os');
@@ -23,7 +22,7 @@ var config = {
 	}
 };
 
-var confpath = program.config || "/etc/proteus-monitor/agent.json";
+var confpath = program.config || __dirname + '/etc/agent.conf' ;
 try {
 	if (fs.statSync(confpath)) {
 		// load config from file
